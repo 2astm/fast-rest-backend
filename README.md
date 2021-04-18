@@ -30,9 +30,12 @@
 
 ```bash
 $ npm install
+$ cp .env.example .env
 ```
 
 ## Running the app
+
+- Make sure that **.env** file is configured correctly before starting an application
 
 ```bash
 # development
