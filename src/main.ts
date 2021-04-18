@@ -14,10 +14,10 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, swaggerConfig);
   SwaggerModule.setup('api-docs', app, document);
-  const port = config.get('serverOptions.port');
+  const port = config.get('PORT');
   await app.listen(port, () => {
     logger.verbose(`Server is listening port: ${port}`);
-    logger.verbose(`Server is running in ${config.get('mode')} mode`);
+    logger.verbose(`Server is running in mode: ${config.get('MODE')}`);
   });
 }
 bootstrap().catch((reason) => {
