@@ -4,7 +4,8 @@ export default {
     PORT: Joi.number().integer().default(3000).failover(3000),
     MODE: Joi.string()
       .valid('development', 'production')
+      .failover('development')
       .default('development'),
-    SQL_LOGS: Joi.boolean().default(false),
+    SQL_LOGS: Joi.boolean().default(false).failover(false),
   }),
 };
